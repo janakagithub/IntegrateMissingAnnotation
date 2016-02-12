@@ -1,0 +1,48 @@
+#
+# define display information
+#
+name: Integrate Possible Missing Annotation
+tooltip: |
+    Intergrate possible missing annoation for a given genome based on closely related reference genomes
+screenshots: []
+
+icon: icon.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    genome_id :
+        ui-name : |
+            Genome Name
+        short-hint : |
+            The Genome of interest for integrating missing annoation
+    missing_roles :
+        ui-name : |
+            Missing Annotation Data
+        short-hint : |
+            The Missing annotation information that will be integrated to the genome
+    outputGenome :
+        ui-name : |
+            Output name
+        short-hint : |
+            Output name  of data object
+        long-hint  : |
+            Analysis data will be stored in this object.
+description : |
+    <p>This method possible missing annotations based on closely related well annoated set of reference genomes, These missing annotation could be used to improve the quality of the metabolic models.</p>

@@ -1,0 +1,89 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "janakakbase"
+    ],
+    "contact": "janakaed@anl.gov",
+    "visible": true,
+    "categories": ["active"],
+    "widgets": {
+        "input": null,
+        "output": "null"
+    },
+    "parameters": [
+        {
+            "id": "genome_id",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseGenomes.Genome" ]
+            }
+        },
+        {
+            "id": "missing_roles",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseFBA.MissingRoleData" ]
+            }
+        },
+        {
+            "id" : "outputGenome",
+            "optional" : false,
+            "advanced" : false,
+            "allow_multiple" : false,
+            "default_values" : [ "" ],
+            "field_type" : "text",
+            "text_options" : {
+            "valid_ws_types" : [ "KbaseGenomes.Genome" ],
+            "is_output_name":true
+            }
+         }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "SEEDtk",
+            "method": "missing_roles",
+            "input_mapping": [
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_argument_position": "0"
+                },
+                {
+                    "input_parameter": "genome_id",
+                    "target_argument_position": "1"
+                },
+                {
+                    "input_parameter": "missing_roles",
+                    "target_argument_position": "2"
+                },
+                {
+                    "input_parameter": "outputGenome",
+                    "target_argument_position": "3"
+                }
+            ],
+            "output_mapping": [
+                {
+                  "constant_value": "KbaseGenomes.Genome",
+                  "target_property": "type"
+                },
+                {
+                  "input_parameter": "outputGenome",
+                  "target_property": "obj"
+                },
+                {
+                  "narrative_system_variable": "workspace",
+                  "target_property": "ws"
+                }
+              ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
