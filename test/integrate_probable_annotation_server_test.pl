@@ -44,7 +44,7 @@ eval {
 
 my $genome = "1206767.3";
 my $mR = "MissingRole1206767";
-my $outPut = "integratedGenome";
+my $outPut = "integratedAnnotation1206767.3";
 my $ws = 'janakakbase:1450461455608';
 my $exp_cond = 'BU12_10.CEL.gz';
 my $ecutoff = 0.4;
