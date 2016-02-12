@@ -49,8 +49,8 @@
     "behavior": {
         "service-mapping": {
             "url": "",
-            "name": "SEEDtk",
-            "method": "missing_roles",
+            "name": "IntegrateMissingAnnotation",
+            "method": "integrate_annotation",
             "input_mapping": [
                 {
                     "narrative_system_variable": "workspace",

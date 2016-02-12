@@ -2,7 +2,7 @@ package integrate_probable_annotation::integrate_probable_annotationImpl;
 use strict;
 use Bio::KBase::Exceptions;
 # Use Semantic Versioning (2.0.0-rc.1)
-# http://semver.org
+# http://semver.org 
 our $VERSION = "0.1.0";
 
 =head1 NAME
@@ -230,7 +230,7 @@ sub integrate_annotation
 
 
 
-=head2 version
+=head2 version 
 
   $return = $obj->version()
 
